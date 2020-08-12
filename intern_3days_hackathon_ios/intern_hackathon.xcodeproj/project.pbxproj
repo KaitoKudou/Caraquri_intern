@@ -26,11 +26,32 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+		44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E6024E3FC9B006A32C3 /* Calendar.storyboard */; };
+		44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */; };
+		44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; };
+		44431E6624E3FEA4006A32C3 /* FSCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44431E6924E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */; };
+		44431E6A24E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		556DD8F924E3C8A300D0F0B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
 		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
 		556DD8FE24E3D31500D0F0B8 /* HomrViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8FC24E3D31500D0F0B8 /* HomrViewCell.swift */; };
 		556DD8FF24E3D31500D0F0B8 /* HomrViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FD24E3D31500D0F0B8 /* HomrViewCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44431E6724E3FEA4006A32C3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44431E6A24E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Embed Frameworks */,
+				44431E6624E3FEA4006A32C3 /* FSCalendar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		082CF75E24D569E7001F7680 /* SampleSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleSearch.storyboard; sourceTree = "<group>"; };
@@ -55,6 +76,10 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		44431E6024E3FC9B006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		44431E6424E3FEA4006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
+		44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalculateCalendarLogic.framework; path = Carthage/Build/iOS/CalculateCalendarLogic.framework; sourceTree = "<group>"; };
 		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		556DD8FC24E3D31500D0F0B8 /* HomrViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomrViewCell.swift; sourceTree = "<group>"; };
@@ -66,7 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44431E6924E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Frameworks */,
 				08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */,
+				44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */,
 				083FD71724C34D2300383122 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +166,8 @@
 		083FD71324C34D2300383122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */,
+				44431E6424E3FEA4006A32C3 /* FSCalendar.framework */,
 				083FD71624C34D2300383122 /* APIKit.framework */,
 				083FD71424C34D2300383122 /* Nuke.framework */,
 				083FD71524C34D2300383122 /* Rswift.framework */,
@@ -149,6 +178,7 @@
 		08527CC924C7001400C1F1D5 /* SampleScreen */ = {
 			isa = PBXGroup;
 			children = (
+				44431E5F24E3FC7C006A32C3 /* Calendar */,
 				556DD8F724E3C88800D0F0B8 /* Home */,
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
@@ -199,6 +229,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		44431E5F24E3FC7C006A32C3 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				44431E6024E3FC9B006A32C3 /* Calendar.storyboard */,
+				44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		556DD8F724E3C88800D0F0B8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +262,7 @@
 				083FD6FA24C33D2900383122 /* Resources */,
 				08A6C8E824C46FA600A812DF /* SwiftLint */,
 				083FD71E24C36F5700383122 /* Run Script Carthage */,
+				44431E6724E3FEA4006A32C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +315,7 @@
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
+				44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
 				556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */,
 				556DD8FF24E3D31500D0F0B8 /* HomrViewCell.xib in Resources */,
@@ -294,6 +335,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CalculateCalendarLogic.framework",
 			);
 			name = "Run Script Carthage";
 			outputFileListPaths = (
@@ -349,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */,
 				556DD8FE24E3D31500D0F0B8 /* HomrViewCell.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
