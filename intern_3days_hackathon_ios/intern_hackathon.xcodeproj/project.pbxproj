@@ -26,7 +26,24 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+		44431E5524E3C957006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E5424E3C957006A32C3 /* Calendar.storyboard */; };
+		44431E5724E3CB29006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5624E3CB29006A32C3 /* FSCalendar.framework */; };
+		44431E5824E3CB29006A32C3 /* FSCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5624E3CB29006A32C3 /* FSCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44431E5924E3CB29006A32C3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44431E5824E3CB29006A32C3 /* FSCalendar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		082CF75E24D569E7001F7680 /* SampleSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleSearch.storyboard; sourceTree = "<group>"; };
@@ -51,6 +68,8 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		44431E5424E3C957006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		44431E5624E3CB29006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */,
+				44431E5724E3CB29006A32C3 /* FSCalendar.framework in Frameworks */,
 				083FD71724C34D2300383122 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +138,6 @@
 			children = (
 				08C5FE2324CD79D4007100CA /* API */,
 				08527CC924C7001400C1F1D5 /* SampleScreen */,
-				08CC377D24D9870200438D2F /* Screen */,
 				088E557724D6698900A2FE3E /* Utils */,
 				083FD6FF24C33D2900383122 /* AppDelegate.swift */,
 				083FD70824C33D2B00383122 /* Assets.xcassets */,
@@ -132,6 +151,7 @@
 		083FD71324C34D2300383122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44431E5624E3CB29006A32C3 /* FSCalendar.framework */,
 				083FD71624C34D2300383122 /* APIKit.framework */,
 				083FD71424C34D2300383122 /* Nuke.framework */,
 				083FD71524C34D2300383122 /* Rswift.framework */,
@@ -142,6 +162,7 @@
 		08527CC924C7001400C1F1D5 /* SampleScreen */ = {
 			isa = PBXGroup;
 			children = (
+				44431E5324E3C883006A32C3 /* Calendar */,
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
 				082CF76624D5A816001F7680 /* EventList */,
@@ -191,11 +212,12 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		08CC377D24D9870200438D2F /* Screen */ = {
+		44431E5324E3C883006A32C3 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				44431E5424E3C957006A32C3 /* Calendar.storyboard */,
 			);
-			path = Screen;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +233,7 @@
 				083FD6FA24C33D2900383122 /* Resources */,
 				08A6C8E824C46FA600A812DF /* SwiftLint */,
 				083FD71E24C36F5700383122 /* Run Script Carthage */,
+				44431E5924E3CB29006A32C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44431E5524E3C957006A32C3 /* Calendar.storyboard in Resources */,
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
@@ -280,6 +304,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
 			);
 			name = "Run Script Carthage";
 			outputFileListPaths = (
