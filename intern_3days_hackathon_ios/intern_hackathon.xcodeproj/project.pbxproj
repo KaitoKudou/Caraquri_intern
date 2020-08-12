@@ -26,12 +26,19 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+<<<<<<< HEAD
 		44431E5524E3C957006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E5424E3C957006A32C3 /* Calendar.storyboard */; };
 		44431E5724E3CB29006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5624E3CB29006A32C3 /* FSCalendar.framework */; };
 		44431E5824E3CB29006A32C3 /* FSCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5624E3CB29006A32C3 /* FSCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44431E5B24E3D2A9006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E5A24E3D2A9006A32C3 /* CalendarViewController.swift */; };
 		44431E5D24E3D868006A32C3 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5C24E3D868006A32C3 /* CalculateCalendarLogic.framework */; };
 		44431E5E24E3D868006A32C3 /* CalculateCalendarLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E5C24E3D868006A32C3 /* CalculateCalendarLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+=======
+		556DD8F924E3C8A300D0F0B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
+		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
+		556DD8FE24E3D31500D0F0B8 /* HomrViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8FC24E3D31500D0F0B8 /* HomrViewCell.swift */; };
+		556DD8FF24E3D31500D0F0B8 /* HomrViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FD24E3D31500D0F0B8 /* HomrViewCell.xib */; };
+>>>>>>> develop
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,10 +79,17 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		44431E5424E3C957006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		44431E5624E3CB29006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
 		44431E5A24E3D2A9006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		44431E5C24E3D868006A32C3 /* CalculateCalendarLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalculateCalendarLogic.framework; path = Carthage/Build/iOS/CalculateCalendarLogic.framework; sourceTree = "<group>"; };
+=======
+		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		556DD8FC24E3D31500D0F0B8 /* HomrViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomrViewCell.swift; sourceTree = "<group>"; };
+		556DD8FD24E3D31500D0F0B8 /* HomrViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomrViewCell.xib; sourceTree = "<group>"; };
+>>>>>>> develop
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +184,11 @@
 		08527CC924C7001400C1F1D5 /* SampleScreen */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				44431E5324E3C883006A32C3 /* Calendar */,
+=======
+				556DD8F724E3C88800D0F0B8 /* Home */,
+>>>>>>> develop
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
 				082CF76624D5A816001F7680 /* EventList */,
@@ -220,6 +238,7 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		44431E5324E3C883006A32C3 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +246,17 @@
 				44431E5A24E3D2A9006A32C3 /* CalendarViewController.swift */,
 			);
 			path = Calendar;
+=======
+		556DD8F724E3C88800D0F0B8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */,
+				556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */,
+				556DD8FC24E3D31500D0F0B8 /* HomrViewCell.swift */,
+				556DD8FD24E3D31500D0F0B8 /* HomrViewCell.xib */,
+			);
+			path = Home;
+>>>>>>> develop
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +327,8 @@
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
+				556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */,
+				556DD8FF24E3D31500D0F0B8 /* HomrViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556DD8FE24E3D31500D0F0B8 /* HomrViewCell.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
@@ -382,6 +415,7 @@
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
+				556DD8F924E3C8A300D0F0B8 /* HomeViewController.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
