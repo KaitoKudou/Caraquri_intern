@@ -26,6 +26,8 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+		556DD8F924E3C8A300D0F0B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
+		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +122,6 @@
 			children = (
 				08C5FE2324CD79D4007100CA /* API */,
 				08527CC924C7001400C1F1D5 /* SampleScreen */,
-				08CC377D24D9870200438D2F /* Screen */,
 				088E557724D6698900A2FE3E /* Utils */,
 				083FD6FF24C33D2900383122 /* AppDelegate.swift */,
 				083FD70824C33D2B00383122 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 		08527CC924C7001400C1F1D5 /* SampleScreen */ = {
 			isa = PBXGroup;
 			children = (
+				556DD8F724E3C88800D0F0B8 /* Home */,
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
 				082CF76624D5A816001F7680 /* EventList */,
@@ -191,11 +195,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		08CC377D24D9870200438D2F /* Screen */ = {
+		556DD8F724E3C88800D0F0B8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */,
+				556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */,
 			);
-			path = Screen;
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +270,7 @@
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
+				556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +353,7 @@
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
+				556DD8F924E3C8A300D0F0B8 /* HomeViewController.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
