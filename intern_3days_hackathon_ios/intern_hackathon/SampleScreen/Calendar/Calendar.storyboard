@@ -27,7 +27,7 @@
         <!--Calendar-->
         <scene sceneID="vAM-BO-lGO">
             <objects>
-                <viewController id="9s1-Zx-scm" sceneMemberID="viewController">
+                <viewController id="9s1-Zx-scm" customClass="CalendarViewController" customModule="intern_hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJe-OS-vgt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="urV-xg-u3r"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="dCO-GZ-XW8"/>
+                    <connections>
+                        <outlet property="calendar" destination="1SB-jP-TWi" id="BmV-4f-x6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tU8-Ya-Twy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
