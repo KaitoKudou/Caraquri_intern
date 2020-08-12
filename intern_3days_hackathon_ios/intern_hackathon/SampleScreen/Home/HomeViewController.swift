@@ -15,11 +15,11 @@ class HomeViewController: UIViewController {
 
     }
 }
-//MARK: -
+//MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     
 }
-//MARK: -
+//MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
