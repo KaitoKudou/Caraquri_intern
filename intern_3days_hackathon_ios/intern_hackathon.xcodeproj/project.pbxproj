@@ -26,6 +26,9 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+		4440150B24E4F5200088B6FA /* CalendarViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */; };
+		4440150D24E505770088B6FA /* EventInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4440150C24E505770088B6FA /* EventInput.storyboard */; };
+		4440150F24E507F40088B6FA /* EventInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440150E24E507F40088B6FA /* EventInputViewController.swift */; };
 		44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E6024E3FC9B006A32C3 /* Calendar.storyboard */; };
 		44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */; };
 		44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; };
@@ -79,6 +82,9 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewPresenter.swift; sourceTree = "<group>"; };
+		4440150C24E505770088B6FA /* EventInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventInput.storyboard; sourceTree = "<group>"; };
+		4440150E24E507F40088B6FA /* EventInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInputViewController.swift; sourceTree = "<group>"; };
 		44431E6024E3FC9B006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		44431E6424E3FEA4006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
@@ -292,11 +298,21 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		4440150924E4F41B0088B6FA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		44431E5F24E3FC7C006A32C3 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				44431E6024E3FC9B006A32C3 /* Calendar.storyboard */,
+				4440150C24E505770088B6FA /* EventInput.storyboard */,
 				44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */,
+				4440150E24E507F40088B6FA /* EventInputViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -315,6 +331,7 @@
 		5578350524E4D46100B2F9D5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4440150924E4F41B0088B6FA /* Calendar */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -398,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5578353B24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle in Resources */,
+				4440150D24E505770088B6FA /* EventInput.storyboard in Resources */,
 				5578350924E4D63D00B2F9D5 /* GoogleService-Info.plist in Resources */,
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
@@ -482,7 +500,9 @@
 			files = (
 				44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */,
 				556DD8FE24E3D31500D0F0B8 /* HomeViewCell.swift in Sources */,
+				4440150F24E507F40088B6FA /* EventInputViewController.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
+				4440150B24E4F5200088B6FA /* CalendarViewPresenter.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
 				55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */,
