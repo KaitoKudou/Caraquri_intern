@@ -89,6 +89,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateTextField" destination="3BA-qQ-0Ie" id="s29-NI-DaW"/>
+                        <outlet property="memoTextField" destination="EBt-30-3aR" id="g2b-pS-qhh"/>
+                        <outlet property="placeTextField" destination="3sZ-aw-FcB" id="Lui-GV-jgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHX-CR-KDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

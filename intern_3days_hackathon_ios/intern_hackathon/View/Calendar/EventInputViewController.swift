@@ -11,6 +11,8 @@ import UIKit
 class EventInputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var placeTextField: UITextField!
+    @IBOutlet weak var memoTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
