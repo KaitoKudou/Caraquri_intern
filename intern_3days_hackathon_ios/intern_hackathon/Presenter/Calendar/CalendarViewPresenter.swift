@@ -7,14 +7,12 @@
 //
 
 import CalculateCalendarLogic
-import Firebase
 import Foundation
 
 class CalendarViewPresenter {
     
     //祝日判定用のカレンダークラスのインスタンス
     private let tmpCalendar = Calendar(identifier: .gregorian)
-    let db = Firestore.firestore()
     
     // 祝日判定を行い結果を返すメソッド(True:祝日)
     func judgeHoliday(date: Date) -> Bool {
@@ -32,20 +30,5 @@ class CalendarViewPresenter {
     // 曜日判定(日曜日:1 〜 土曜日:7)
     func getWeekIndex(date: Date) -> Int {
         return tmpCalendar.component(.weekday, from: date)
-    }
-    
-    func addEvent(day: Date, month: Date, place: String, memo: String) {
-        var ref: DocumentReference? = nil
-        ref = db.collection("events").addDocument(data: [
-            "date": "\(month)/\(day)",
-            "place": place,
-            "memo": memo
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
     }
 }
