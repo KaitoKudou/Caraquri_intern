@@ -76,7 +76,11 @@
                         <viewLayoutGuide key="safeArea" id="cMA-oT-uTT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event Input" id="j7z-C7-oqH">
-                        <barButtonItem key="leftBarButtonItem" title="完了" id="qfw-zN-Q7p"/>
+                        <barButtonItem key="leftBarButtonItem" title="完了" id="qfw-zN-Q7p">
+                            <connections>
+                                <action selector="closeModal:" destination="hcB-Cl-xXd" id="gAc-nz-Amt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateTextField" destination="BzW-xo-tLL" id="T3D-Oy-ICF"/>
