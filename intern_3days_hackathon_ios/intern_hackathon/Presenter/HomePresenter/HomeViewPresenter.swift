@@ -10,6 +10,8 @@ import Foundation
 
 class HomeViewPresenter {
     var events: [Event] = []
+    var searchCount = 1
+    var searchStart = 1
     private let view: HomeViewProtocol!
     
     init(view: HomeViewProtocol) {
@@ -17,13 +19,14 @@ class HomeViewPresenter {
     }
     
     func searchEvents(viewDidLoad: Bool, keyword: String) {
-        refresh()
-        APIClient.fetchEvents(keyword: keyword, viewDidLoad: viewDidLoad) { [weak self] result in
+        APIClient.fetchEvents(keyword: keyword, viewDidLoad: viewDidLoad, startCount: searchStart) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(let event):
                     self.events.append(contentsOf: event)
+                    self.searchCount = event.count
+                    self.searchStart += event.count
                     self.view.reloadData()
                 case .failure(let error):
                     self.view.presentAlert(error: error)
@@ -32,7 +35,8 @@ class HomeViewPresenter {
         }
     }
     
-    private func refresh() {
+    func refresh() {
         events.removeAll()
+        searchCount = 1
     }
 }

@@ -18,6 +18,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var eventsList: UITableView!
     @IBOutlet private weak var eventSearchBar: UISearchBar!
     var presenter: HomeViewPresenter!
+    var searchingText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,13 @@ extension HomeViewController: UITableViewDataSource {
         cell.set(event: presenter.events[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let targetCell = presenter.events.count - indexPath.row
+        if presenter.events.count >= 20 && targetCell == 5 && presenter.searchCount == 20 {
+            presenter.searchEvents(viewDidLoad: false, keyword: searchingText)
+        }
+    }
 }
 //MARK: - UISearchBarDelegate
 extension HomeViewController: UISearchBarDelegate {
@@ -55,6 +63,9 @@ extension HomeViewController: UISearchBarDelegate {
         guard let text = searchBar.text, !searchBar.text!.isEmpty else {
             return
         }
+        searchingText = text
+        print(text)
+        presenter.refresh()
         presenter.searchEvents(viewDidLoad: false, keyword: text)
         searchBar.resignFirstResponder()
     }
