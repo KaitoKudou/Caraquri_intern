@@ -17,6 +17,8 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         dateTextField.delegate = self
+        placeTextField.delegate = self
+        memoTextField.delegate = self
         setupToolbar()
     }
     
@@ -38,6 +40,12 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         datePicker.datePickerMode = UIDatePicker.Mode.date
         dateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        placeTextField.resignFirstResponder()
+        memoTextField.resignFirstResponder()
+        return true
     }
     
     @objc func datePickerValueChanged(sender: UIDatePicker) {
