@@ -39,6 +39,10 @@
                         <viewLayoutGuide key="safeArea" id="8al-XT-uMe"/>
                     </view>
                     <navigationItem key="navigationItem" id="CNy-5y-krS"/>
+                    <connections>
+                        <outlet property="eventSearchBar" destination="eXl-CA-hr8" id="crn-QH-ODD"/>
+                        <outlet property="eventsList" destination="Tig-Ba-agn" id="5Qh-Kt-H2f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLd-Dd-Mfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

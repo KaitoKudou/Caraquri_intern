@@ -3,12 +3,16 @@ import UIKit
 final class APIClient {
     // swiftlint:disable cyclomatic_complexity
     // swiftlint:disable function_body_length
-    static func fetchEvents(keyword: String,
+    static func fetchEvents(keyword: String, viewDidLoad: Bool,
                             completion: @escaping(Result<[Event], ErrorType>) -> Void ) {
         
         var urlComps = URLComponents(string: "https://connpass.com/api/v1/event")!
-        let queryItems = [URLQueryItem(name: "count", value: "20"),
-        URLQueryItem(name: "keyword", value: keyword)]
+        var queryItems = [URLQueryItem(name: "count", value: "20"),
+        URLQueryItem(name: "order", value: "3")]
+        if viewDidLoad == false {
+            queryItems.append(URLQueryItem(name: "keyword", value: keyword))
+        }
+        
         urlComps.queryItems = queryItems
         
         let session = URLSession(configuration: .default)
