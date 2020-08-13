@@ -10,8 +10,10 @@ import CalculateCalendarLogic
 import FSCalendar
 import UIKit
 
-class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, UITextFieldDelegate {
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var eventTextField: UITextField!
+    
     let dayOfTheWeeks = ["日": 0, "月": 1, "火": 2, "水": 3, "木": 4, "金": 5, "土": 6]
     
     //祝日判定用のカレンダークラスのインスタンス
@@ -22,6 +24,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         calendar.delegate = self
         calendar.dataSource = self
+        eventTextField.delegate = self
+        eventTextField.placeholder = "参加予定のイベントを入力してください"
     }
     
     // 土日・祝日の文字色を変える
@@ -58,5 +62,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     // 曜日判定(日曜日:1 〜 土曜日:7)
     func getWeekIndex(date: Date) -> Int {
         return tmpCalendar.component(.weekday, from: date)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        eventTextField.resignFirstResponder()
+        return true
     }
 }
