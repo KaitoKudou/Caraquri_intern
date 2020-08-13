@@ -6,8 +6,8 @@
 //  Copyright © 2020 caraquri. All rights reserved.
 //
 
-import Foundation
 import Firebase
+import Foundation
 
 class EventInputViewPresenter {
     
