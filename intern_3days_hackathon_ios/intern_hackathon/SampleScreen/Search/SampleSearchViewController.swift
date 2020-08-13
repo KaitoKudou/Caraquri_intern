@@ -14,7 +14,7 @@ final class SampleSearchViewContorller: UIViewController {
         
         guard let text = textField.text, !text.isEmpty else { return }
 
-        APIClient.fetchEvents(keyword: text) { [weak self] result in
+        APIClient.fetchEvents(keyword: text, viewDidLoad: true, startCount: 1) { [weak self] result in
             // URLSessionはbackground threadで行われる為UIの更新を明示的にMain Theadで行う
             DispatchQueue.main.sync {
                 switch result {
