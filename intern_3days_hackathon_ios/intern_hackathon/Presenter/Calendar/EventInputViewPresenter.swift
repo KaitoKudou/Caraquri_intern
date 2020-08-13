@@ -14,10 +14,10 @@ class EventInputViewPresenter {
     let db = Firestore.firestore()
     
     // firebaseにイベントを登録する
-    func addEvent(day: Date, month: Date, place: String, memo: String) {
+    func addEvent(date: String, place: String, memo: String) {
         var ref: DocumentReference?
         ref = db.collection("events").addDocument(data: [
-            "date": "\(month)/\(day)",
+            "date": date,
             "place": place,
             "memo": memo
         ]) { err in
