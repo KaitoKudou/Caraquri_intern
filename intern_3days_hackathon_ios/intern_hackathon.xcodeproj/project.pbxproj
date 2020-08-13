@@ -16,6 +16,7 @@
 		083FD70024C33D2900383122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FD6FF24C33D2900383122 /* AppDelegate.swift */; };
 		083FD70924C33D2B00383122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083FD70824C33D2B00383122 /* Assets.xcassets */; };
 		083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083FD70A24C33D2B00383122 /* LaunchScreen.storyboard */; };
+		083FD71724C34D2300383122 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
 		0841933724D9505800BFCBD3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841933624D9505800BFCBD3 /* Logger.swift */; };
 		0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841933824D950FF00BFCBD3 /* ErrorType.swift */; };
 		086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F846424D997A00084571E /* UIAlertController+Extensions.swift */; };
@@ -25,37 +26,6 @@
 		088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E557C24D7190300A2FE3E /* MainTabBarController.swift */; };
 		08C5FE2624CD7A8B007100CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5FE2524CD7A8B007100CA /* Event.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
-		44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E6024E3FC9B006A32C3 /* Calendar.storyboard */; };
-		44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */; };
-		44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; };
-		44431E6924E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */; };
-		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
-		556DD8FE24E3D31500D0F0B8 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */; };
-		556DD8FF24E3D31500D0F0B8 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */; };
-		5578350924E4D63D00B2F9D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */; };
-		5578353B24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5578353A24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle */; };
-		5578354124E4E7D900B2F9D5 /* BoringSSL-GRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351424E4DCC300B2F9D5 /* BoringSSL-GRPC.framework */; };
-		5578354324E4E7D900B2F9D5 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */; };
-		5578354524E4E7D900B2F9D5 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351224E4DCC200B2F9D5 /* FIRAnalyticsConnector.framework */; };
-		5578354724E4E7D900B2F9D5 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350E24E4DCC200B2F9D5 /* Firebase.framework */; };
-		5578354924E4E7D900B2F9D5 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351124E4DCC200B2F9D5 /* FirebaseAnalytics.framework */; };
-		5578354B24E4E7D900B2F9D5 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351724E4DCC300B2F9D5 /* FirebaseCore.framework */; };
-		5578354D24E4E7D900B2F9D5 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351624E4DCC300B2F9D5 /* FirebaseCoreDiagnostics.framework */; };
-		5578354F24E4E7DA00B2F9D5 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350A24E4DCC200B2F9D5 /* FirebaseFirestore.framework */; };
-		5578355124E4E7DA00B2F9D5 /* FirebaseInstallations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351324E4DCC200B2F9D5 /* FirebaseInstallations.framework */; };
-		5578355324E4E7DA00B2F9D5 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350D24E4DCC200B2F9D5 /* GoogleAppMeasurement.framework */; };
-		5578355524E4E7DA00B2F9D5 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350F24E4DCC200B2F9D5 /* GoogleDataTransport.framework */; };
-		5578355724E4E7DA00B2F9D5 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350C24E4DCC200B2F9D5 /* GoogleUtilities.framework */; };
-		5578355924E4E7DA00B2F9D5 /* gRPC-C++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351524E4DCC300B2F9D5 /* gRPC-C++.framework */; };
-		5578355B24E4E7DA00B2F9D5 /* gRPC-Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578350B24E4DCC200B2F9D5 /* gRPC-Core.framework */; };
-		5578355D24E4E7DA00B2F9D5 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351824E4DCC300B2F9D5 /* leveldb-library.framework */; };
-		5578355F24E4E7DA00B2F9D5 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351024E4DCC200B2F9D5 /* nanopb.framework */; };
-		5578356124E4E7DA00B2F9D5 /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */; };
-		5578356524E4E7DA00B2F9D5 /* abseil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578356424E4E7DA00B2F9D5 /* abseil.framework */; };
-		5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */; };
-		5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
-		5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */; };
-		55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,37 +51,6 @@
 		088E557924D669AF00A2FE3E /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		088E557C24D7190300A2FE3E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		08C5FE2524CD7A8B007100CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		44431E6024E3FC9B006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
-		44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		44431E6424E3FEA4006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
-		44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalculateCalendarLogic.framework; path = Carthage/Build/iOS/CalculateCalendarLogic.framework; sourceTree = "<group>"; };
-		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
-		556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
-		5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5578350A24E4DCC200B2F9D5 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseFirestore.framework; path = Carthage/Build/iOS/FirebaseFirestore.framework; sourceTree = "<group>"; };
-		5578350B24E4DCC200B2F9D5 /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-Core.framework"; path = "Carthage/Build/iOS/gRPC-Core.framework"; sourceTree = "<group>"; };
-		5578350C24E4DCC200B2F9D5 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
-		5578350D24E4DCC200B2F9D5 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		5578350E24E4DCC200B2F9D5 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = Carthage/Build/iOS/Firebase.framework; sourceTree = "<group>"; };
-		5578350F24E4DCC200B2F9D5 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = "<group>"; };
-		5578351024E4DCC200B2F9D5 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
-		5578351124E4DCC200B2F9D5 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		5578351224E4DCC200B2F9D5 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Carthage/Build/iOS/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
-		5578351324E4DCC200B2F9D5 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstallations.framework; path = Carthage/Build/iOS/FirebaseInstallations.framework; sourceTree = "<group>"; };
-		5578351424E4DCC300B2F9D5 /* BoringSSL-GRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BoringSSL-GRPC.framework"; path = "Carthage/Build/iOS/BoringSSL-GRPC.framework"; sourceTree = "<group>"; };
-		5578351524E4DCC300B2F9D5 /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-C++.framework"; path = "Carthage/Build/iOS/gRPC-C++.framework"; sourceTree = "<group>"; };
-		5578351624E4DCC300B2F9D5 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		5578351724E4DCC300B2F9D5 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
-		5578351824E4DCC300B2F9D5 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "leveldb-library.framework"; path = "Carthage/Build/iOS/leveldb-library.framework"; sourceTree = "<group>"; };
-		5578353924E4DDFC00B2F9D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "intern_hackathon/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5578353A24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "gRPCCertificates-Cpp.bundle"; path = "Carthage/Build/iOS/gRPC-C++.framework/Resources/gRPCCertificates-Cpp.bundle"; sourceTree = "<group>"; };
-		5578353C24E4E4CC00B2F9D5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Carthage/Build/iOS/PromisesObjC.framework/Headers; sourceTree = "<group>"; };
-		5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromisesObjC.framework; path = Carthage/Build/iOS/PromisesObjC.framework; sourceTree = "<group>"; };
-		5578356424E4E7DA00B2F9D5 /* abseil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = abseil.framework; path = Carthage/Build/iOS/abseil.framework; sourceTree = "<group>"; };
-		5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
-		5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboad+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,28 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */,
-				5578355524E4E7DA00B2F9D5 /* GoogleDataTransport.framework in Frameworks */,
-				5578354324E4E7D900B2F9D5 /* CalculateCalendarLogic.framework in Frameworks */,
-				5578355F24E4E7DA00B2F9D5 /* nanopb.framework in Frameworks */,
-				44431E6924E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Frameworks */,
-				5578354924E4E7D900B2F9D5 /* FirebaseAnalytics.framework in Frameworks */,
 				08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */,
-				5578355324E4E7DA00B2F9D5 /* GoogleAppMeasurement.framework in Frameworks */,
-				5578355D24E4E7DA00B2F9D5 /* leveldb-library.framework in Frameworks */,
-				5578356524E4E7DA00B2F9D5 /* abseil.framework in Frameworks */,
-				5578355924E4E7DA00B2F9D5 /* gRPC-C++.framework in Frameworks */,
-				5578355124E4E7DA00B2F9D5 /* FirebaseInstallations.framework in Frameworks */,
-				44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */,
-				5578354524E4E7D900B2F9D5 /* FIRAnalyticsConnector.framework in Frameworks */,
-				5578354B24E4E7D900B2F9D5 /* FirebaseCore.framework in Frameworks */,
-				5578355B24E4E7DA00B2F9D5 /* gRPC-Core.framework in Frameworks */,
-				5578354D24E4E7D900B2F9D5 /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				5578354124E4E7D900B2F9D5 /* BoringSSL-GRPC.framework in Frameworks */,
-				5578354724E4E7D900B2F9D5 /* Firebase.framework in Frameworks */,
-				5578355724E4E7DA00B2F9D5 /* GoogleUtilities.framework in Frameworks */,
-				5578354F24E4E7DA00B2F9D5 /* FirebaseFirestore.framework in Frameworks */,
-				5578356124E4E7DA00B2F9D5 /* PromisesObjC.framework in Frameworks */,
+				083FD71724C34D2300383122 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +99,6 @@
 		083FD6F324C33D2900383122 = {
 			isa = PBXGroup;
 			children = (
-				5578353A24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle */,
-				5578353924E4DDFC00B2F9D5 /* GoogleService-Info.plist */,
 				083FD6FE24C33D2900383122 /* intern_hackathon */,
 				083FD6FD24C33D2900383122 /* Products */,
 				083FD71324C34D2300383122 /* Frameworks */,
@@ -199,17 +116,15 @@
 		083FD6FE24C33D2900383122 /* intern_hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				5578350724E4D46800B2F9D5 /* Model */,
-				5578350624E4D46500B2F9D5 /* View */,
-				5578350524E4D46100B2F9D5 /* Presenter */,
+				08C5FE2324CD79D4007100CA /* API */,
 				08527CC924C7001400C1F1D5 /* SampleScreen */,
+				08CC377D24D9870200438D2F /* Screen */,
 				088E557724D6698900A2FE3E /* Utils */,
 				083FD6FF24C33D2900383122 /* AppDelegate.swift */,
 				083FD70824C33D2B00383122 /* Assets.xcassets */,
 				083FD70D24C33D2B00383122 /* Info.plist */,
 				083FD70A24C33D2B00383122 /* LaunchScreen.storyboard */,
 				082CF76224D59281001F7680 /* R.generated.swift */,
-				5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */,
 			);
 			path = intern_hackathon;
 			sourceTree = "<group>";
@@ -217,26 +132,6 @@
 		083FD71324C34D2300383122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5578356424E4E7DA00B2F9D5 /* abseil.framework */,
-				5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */,
-				5578353C24E4E4CC00B2F9D5 /* Headers */,
-				5578351424E4DCC300B2F9D5 /* BoringSSL-GRPC.framework */,
-				5578351224E4DCC200B2F9D5 /* FIRAnalyticsConnector.framework */,
-				5578350E24E4DCC200B2F9D5 /* Firebase.framework */,
-				5578351124E4DCC200B2F9D5 /* FirebaseAnalytics.framework */,
-				5578351724E4DCC300B2F9D5 /* FirebaseCore.framework */,
-				5578351624E4DCC300B2F9D5 /* FirebaseCoreDiagnostics.framework */,
-				5578350A24E4DCC200B2F9D5 /* FirebaseFirestore.framework */,
-				5578351324E4DCC200B2F9D5 /* FirebaseInstallations.framework */,
-				5578350D24E4DCC200B2F9D5 /* GoogleAppMeasurement.framework */,
-				5578350F24E4DCC200B2F9D5 /* GoogleDataTransport.framework */,
-				5578350C24E4DCC200B2F9D5 /* GoogleUtilities.framework */,
-				5578351524E4DCC300B2F9D5 /* gRPC-C++.framework */,
-				5578350B24E4DCC200B2F9D5 /* gRPC-Core.framework */,
-				5578351824E4DCC300B2F9D5 /* leveldb-library.framework */,
-				5578351024E4DCC200B2F9D5 /* nanopb.framework */,
-				44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */,
-				44431E6424E3FEA4006A32C3 /* FSCalendar.framework */,
 				083FD71624C34D2300383122 /* APIKit.framework */,
 				083FD71424C34D2300383122 /* Nuke.framework */,
 				083FD71524C34D2300383122 /* Rswift.framework */,
@@ -267,7 +162,6 @@
 			children = (
 				088E557924D669AF00A2FE3E /* Array+Extensions.swift */,
 				086F846424D997A00084571E /* UIAlertController+Extensions.swift */,
-				5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,57 +191,11 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		44431E5F24E3FC7C006A32C3 /* Calendar */ = {
+		08CC377D24D9870200438D2F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				44431E6024E3FC9B006A32C3 /* Calendar.storyboard */,
-				44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */,
 			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		556DD8F724E3C88800D0F0B8 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */,
-				556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */,
-				556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */,
-				556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		5578350524E4D46100B2F9D5 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				5578356824E4F15400B2F9D5 /* HomePresenter */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		5578350624E4D46500B2F9D5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				44431E5F24E3FC7C006A32C3 /* Calendar */,
-				556DD8F724E3C88800D0F0B8 /* Home */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5578350724E4D46800B2F9D5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				08C5FE2324CD79D4007100CA /* API */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5578356824E4F15400B2F9D5 /* HomePresenter */ = {
-			isa = PBXGroup;
-			children = (
-				5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */,
-			);
-			path = HomePresenter;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,16 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5578353B24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle in Resources */,
-				5578350924E4D63D00B2F9D5 /* GoogleService-Info.plist in Resources */,
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
-				44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
-				556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */,
-				556DD8FF24E3D31500D0F0B8 /* HomeViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +280,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CalculateCalendarLogic.framework",
 			);
 			name = "Run Script Carthage";
 			outputFileListPaths = (
@@ -494,22 +335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */,
-				556DD8FE24E3D31500D0F0B8 /* HomeViewCell.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
-				55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */,
 				088E557524D660B700A2FE3E /* SampleEventListCell.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
-				5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
-				5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,7 +496,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.intern-hackathon";
 				PRODUCT_NAME = intern_hackathon;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -685,7 +520,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.intern-hackathon";
 				PRODUCT_NAME = intern_hackathon;
 				PROVISIONING_PROFILE_SPECIFIER = "";
