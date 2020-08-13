@@ -14,6 +14,8 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var placeTextField: UITextField!
     @IBOutlet weak var memoTextField: UITextField!
     
+    var eventInputViewPresenter: EventInputViewPresenter!
+    var date: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         dateTextField.delegate = self
@@ -52,6 +54,8 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat  = "MM/dd"
         dateTextField.text = dateFormatter.string(from: sender.date)
+        print(dateFormatter.string(from: sender.date))
+        date = dateFormatter.string(from: sender.date)
     }
     
     @objc func doneBtn() {
