@@ -22,6 +22,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventSearchBar.customToolbar(view: view)
         presenter = HomeViewPresenter(view: self)
         eventsList.register(R.nib.homeViewCell)
         presenter.searchEvents(viewDidLoad: true, keyword: "")

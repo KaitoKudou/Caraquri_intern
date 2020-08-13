@@ -54,6 +54,7 @@
 		5578356524E4E7DA00B2F9D5 /* abseil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578356424E4E7DA00B2F9D5 /* abseil.framework */; };
 		5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */; };
 		5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
+		5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */; };
 		55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromisesObjC.framework; path = Carthage/Build/iOS/PromisesObjC.framework; sourceTree = "<group>"; };
 		5578356424E4E7DA00B2F9D5 /* abseil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = abseil.framework; path = Carthage/Build/iOS/abseil.framework; sourceTree = "<group>"; };
 		5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboad+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 			children = (
 				088E557924D669AF00A2FE3E /* Array+Extensions.swift */,
 				086F846424D997A00084571E /* UIAlertController+Extensions.swift */,
+				5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */,
 				088E557524D660B700A2FE3E /* SampleEventListCell.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
+				5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
