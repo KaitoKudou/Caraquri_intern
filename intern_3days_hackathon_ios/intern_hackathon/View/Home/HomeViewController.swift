@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SafariServices
+
 protocol HomeViewProtocol {
     func reloadData()
     func presentAlert(error: ErrorType)
@@ -26,7 +28,14 @@ final class HomeViewController: UIViewController {
 }
 //MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let urlString = presenter.events[safe: indexPath.row]?.eventURL,
+            let url = URL(string: urlString) else { return }
+        
+        let safariViewController = SFSafariViewController(url: url)
+        present(safariViewController, animated: true)
+    }
 }
 //MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
@@ -49,6 +58,7 @@ extension HomeViewController: UISearchBarDelegate {
         presenter.searchEvents(viewDidLoad: false, keyword: text)
         searchBar.resignFirstResponder()
     }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
     }
