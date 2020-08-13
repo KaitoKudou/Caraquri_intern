@@ -19,21 +19,21 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         dateTextField.delegate = self
         placeTextField.delegate = self
         memoTextField.delegate = self
-        setupToolbar()
+        //setupToolbar()
     }
     
     @IBAction func closeModal(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    func setupToolbar() {
+    /*func setupToolbar() {
         //datepicker上のtoolbarのdoneボタン
         let toolBar: UIToolbar = UIToolbar()
         toolBar.sizeToFit()
         let toolBarBtn = UIBarButtonItem(title: "DONE", style: .plain, target: self, action: #selector(doneBtn))
         toolBar.items = [toolBarBtn]
         dateTextField.inputAccessoryView = toolBar
-    }
+    }*/
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker: UIDatePicker = UIDatePicker()

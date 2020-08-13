@@ -29,6 +29,7 @@
 		4440150B24E4F5200088B6FA /* CalendarViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */; };
 		4440150D24E505770088B6FA /* EventInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4440150C24E505770088B6FA /* EventInput.storyboard */; };
 		4440150F24E507F40088B6FA /* EventInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440150E24E507F40088B6FA /* EventInputViewController.swift */; };
+		4440151124E519350088B6FA /* EventInputViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440151024E519350088B6FA /* EventInputViewPresenter.swift */; };
 		44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44431E6024E3FC9B006A32C3 /* Calendar.storyboard */; };
 		44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */; };
 		44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; };
@@ -85,6 +86,7 @@
 		4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewPresenter.swift; sourceTree = "<group>"; };
 		4440150C24E505770088B6FA /* EventInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventInput.storyboard; sourceTree = "<group>"; };
 		4440150E24E507F40088B6FA /* EventInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInputViewController.swift; sourceTree = "<group>"; };
+		4440151024E519350088B6FA /* EventInputViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInputViewPresenter.swift; sourceTree = "<group>"; };
 		44431E6024E3FC9B006A32C3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		44431E6424E3FEA4006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				4440150A24E4F5200088B6FA /* CalendarViewPresenter.swift */,
+				4440151024E519350088B6FA /* EventInputViewPresenter.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				088E557524D660B700A2FE3E /* SampleEventListCell.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
+				4440151124E519350088B6FA /* EventInputViewPresenter.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
