@@ -22,6 +22,7 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         placeTextField.delegate = self
         memoTextField.delegate = self
         //setupToolbar()
+        eventInputViewPresenter.fetchEvent()
     }
     
     @IBAction func closeModal(_ sender: Any) {
