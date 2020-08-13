@@ -7,33 +7,21 @@
 //
 
 import UIKit
-
+protocol HomeViewProtocol {
+    func reloadData()
+    func presentAlert(error: ErrorType)
+}
 final class HomeViewController: UIViewController {
     
     @IBOutlet private weak var eventsList: UITableView!
     @IBOutlet private weak var eventSearchBar: UISearchBar!
-    var events: [Event] = []
+    var presenter: HomeViewPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = HomeViewPresenter(view: self)
         eventsList.register(R.nib.homeViewCell)
-        searchEvents()
-    }
-    
-    private func searchEvents() {
-        APIClient.fetchEvents(keyword: "", viewDidLoad: true) { [weak self] result in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let event):
-                    self.events.append(contentsOf: event)
-                    self.eventsList.reloadData()
-                case .failure(let error):
-                    let alert = UIAlertController.createErrorAlert(error)
-                    self.present(alert, animated: true)
-                }
-            }
-        }
+        presenter.searchEvents(viewDidLoad: true, keyword: "")
     }
 }
 //MARK: - UITableViewDelegate
@@ -43,12 +31,37 @@ extension HomeViewController: UITableViewDelegate {
 //MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return presenter.events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.homeViewCell, for: indexPath)!
-        cell.set(event: events[indexPath.row])
+        cell.set(event: presenter.events[indexPath.row])
         return cell
+    }
+}
+//MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text, !searchBar.text!.isEmpty else {
+            return
+        }
+        presenter.searchEvents(viewDidLoad: false, keyword: text)
+        searchBar.resignFirstResponder()
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+}
+
+//MARK: - HomeViewProtocol
+extension HomeViewController: HomeViewProtocol {
+    func presentAlert(error: ErrorType) {
+        let alert = UIAlertController.createErrorAlert(error)
+        self.present(alert, animated: true)
+    }
+
+    func reloadData() {
+        eventsList.reloadData()
     }
 }

@@ -16,7 +16,6 @@
 		083FD70024C33D2900383122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FD6FF24C33D2900383122 /* AppDelegate.swift */; };
 		083FD70924C33D2B00383122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083FD70824C33D2B00383122 /* Assets.xcassets */; };
 		083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083FD70A24C33D2B00383122 /* LaunchScreen.storyboard */; };
-		083FD71724C34D2300383122 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
 		0841933724D9505800BFCBD3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841933624D9505800BFCBD3 /* Logger.swift */; };
 		0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841933824D950FF00BFCBD3 /* ErrorType.swift */; };
 		086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F846424D997A00084571E /* UIAlertController+Extensions.swift */; };
@@ -53,6 +52,8 @@
 		5578355F24E4E7DA00B2F9D5 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351024E4DCC200B2F9D5 /* nanopb.framework */; };
 		5578356124E4E7DA00B2F9D5 /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */; };
 		5578356524E4E7DA00B2F9D5 /* abseil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578356424E4E7DA00B2F9D5 /* abseil.framework */; };
+		5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */; };
+		5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
 		55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		5578353C24E4E4CC00B2F9D5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Carthage/Build/iOS/PromisesObjC.framework/Headers; sourceTree = "<group>"; };
 		5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromisesObjC.framework; path = Carthage/Build/iOS/PromisesObjC.framework; sourceTree = "<group>"; };
 		5578356424E4E7DA00B2F9D5 /* abseil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = abseil.framework; path = Carthage/Build/iOS/abseil.framework; sourceTree = "<group>"; };
+		5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */,
 				5578355524E4E7DA00B2F9D5 /* GoogleDataTransport.framework in Frameworks */,
 				5578354324E4E7D900B2F9D5 /* CalculateCalendarLogic.framework in Frameworks */,
 				5578355F24E4E7DA00B2F9D5 /* nanopb.framework in Frameworks */,
@@ -132,7 +135,6 @@
 				5578355B24E4E7DA00B2F9D5 /* gRPC-Core.framework in Frameworks */,
 				5578354D24E4E7D900B2F9D5 /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				5578354124E4E7D900B2F9D5 /* BoringSSL-GRPC.framework in Frameworks */,
-				083FD71724C34D2300383122 /* Nuke.framework in Frameworks */,
 				5578354724E4E7D900B2F9D5 /* Firebase.framework in Frameworks */,
 				5578355724E4E7DA00B2F9D5 /* GoogleUtilities.framework in Frameworks */,
 				5578354F24E4E7DA00B2F9D5 /* FirebaseFirestore.framework in Frameworks */,
@@ -315,6 +317,7 @@
 		5578350524E4D46100B2F9D5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				5578356824E4F15400B2F9D5 /* HomePresenter */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -334,6 +337,14 @@
 				08C5FE2324CD79D4007100CA /* API */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5578356824E4F15400B2F9D5 /* HomePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */,
+			);
+			path = HomePresenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +505,7 @@
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
+				5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
