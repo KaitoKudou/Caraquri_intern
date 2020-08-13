@@ -10,7 +10,7 @@ import Foundation
 
 class HomeViewPresenter {
     var events: [Event] = []
-    var searchCount = 1
+    var APIItemCount = 1
     var searchStart = 1
     private let view: HomeViewProtocol!
     
@@ -25,7 +25,7 @@ class HomeViewPresenter {
                 switch result {
                 case .success(let event):
                     self.events.append(contentsOf: event)
-                    self.searchCount = event.count
+                    self.APIItemCount = event.count
                     self.searchStart += event.count
                     self.view.reloadData()
                 case .failure(let error):
@@ -37,6 +37,7 @@ class HomeViewPresenter {
     
     func refresh() {
         events.removeAll()
-        searchCount = 1
+        APIItemCount = 1
+        searchStart = 1
     }
 }

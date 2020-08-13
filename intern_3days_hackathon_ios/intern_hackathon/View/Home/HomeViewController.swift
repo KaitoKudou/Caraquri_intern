@@ -52,7 +52,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let targetCell = presenter.events.count - indexPath.row
-        if presenter.events.count >= 20 && targetCell == 5 && presenter.searchCount == 20 {
+        if presenter.events.count >= 20 && targetCell == 5 && presenter.APIItemCount == 20 {
             presenter.searchEvents(viewDidLoad: false, keyword: searchingText)
         }
     }
@@ -73,8 +73,15 @@ extension HomeViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { _ in
+            print(searchText)
+            self.presenter.refresh()
+            self.presenter.searchEvents(viewDidLoad: false, keyword: searchText)
+        }
+    }
 }
-
 //MARK: - HomeViewProtocol
 extension HomeViewController: HomeViewProtocol {
     func presentAlert(error: ErrorType) {
