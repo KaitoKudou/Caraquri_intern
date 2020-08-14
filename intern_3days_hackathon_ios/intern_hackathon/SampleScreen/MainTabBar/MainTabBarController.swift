@@ -10,11 +10,11 @@ final class MainTabBarController: UITabBarController {
 
     private func setTab() {
         let homeViewController: UINavigationController = R.storyboard.home.instantiateInitialViewController()!
+        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.search, tag: 1)
+        
         let calendarViewController: UIViewController = R.storyboard.calendar.instantiateInitialViewController()!
-
-        // 仮ViewController。必要に応じて置き換えてください。
-        let dummyViewController = UIViewController()
-
-        setViewControllers([homeViewController, dummyViewController, calendarViewController], animated: false)
+        calendarViewController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.mostViewed, tag: 2)
+        
+        setViewControllers([homeViewController, calendarViewController], animated: false)
     }
 }

@@ -41,6 +41,7 @@
 		5501ABC124E663A6000E697B /* HomeViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC024E663A6000E697B /* HomeViewCellData.swift */; };
 		5501ABC524E663F7000E697B /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC424E663F7000E697B /* HomeViewPresenter.swift */; };
 		5501ABC724E6644A000E697B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC624E6644A000E697B /* HomeViewModel.swift */; };
+		5501ABC924E6741C000E697B /* Indicator + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC824E6741C000E697B /* Indicator + Extension.swift */; };
 		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
 		5578350924E4D63D00B2F9D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */; };
 		5578353B24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5578353A24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle */; };
@@ -106,6 +107,7 @@
 		5501ABC024E663A6000E697B /* HomeViewCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCellData.swift; sourceTree = "<group>"; };
 		5501ABC424E663F7000E697B /* HomeViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 		5501ABC624E6644A000E697B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5501ABC824E6741C000E697B /* Indicator + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + Extension.swift"; sourceTree = "<group>"; };
 		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				088E557924D669AF00A2FE3E /* Array+Extensions.swift */,
 				086F846424D997A00084571E /* UIAlertController+Extensions.swift */,
 				5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */,
+				5501ABC824E6741C000E697B /* Indicator + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */,
 				4440151524E53EDF0088B6FA /* EventPlan.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
+				5501ABC924E6741C000E697B /* Indicator + Extension.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,

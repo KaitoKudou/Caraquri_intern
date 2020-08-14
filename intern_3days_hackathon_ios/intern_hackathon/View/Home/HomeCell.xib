@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開催地: 東京都港区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qa-Iy-og4">
-                        <rect key="frame" x="10" y="57" width="105.5" height="14"/>
+                        <rect key="frame" x="10" y="57" width="273" height="14"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -59,11 +59,15 @@
                     <constraint firstAttribute="trailing" secondItem="58p-HB-FLi" secondAttribute="trailing" constant="23" id="RpE-YK-KG6"/>
                     <constraint firstItem="58p-HB-FLi" firstAttribute="top" secondItem="iG8-Qc-vlz" secondAttribute="bottom" constant="8.5" id="URz-hP-G75"/>
                     <constraint firstItem="58p-HB-FLi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="X9R-Eg-Wii"/>
+                    <constraint firstItem="YQu-QT-bGp" firstAttribute="leading" secondItem="9qa-Iy-og4" secondAttribute="trailing" constant="10" id="bpC-JS-57s"/>
                     <constraint firstItem="9qa-Iy-og4" firstAttribute="leading" secondItem="58p-HB-FLi" secondAttribute="leading" id="tlr-1c-Jj4"/>
                     <constraint firstItem="iG8-Qc-vlz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="zYa-z8-9yd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="address" destination="9qa-Iy-og4" id="dt9-QG-cGi"/>
                 <outlet property="bookmark" destination="YQu-QT-bGp" id="eeb-Ux-fkk"/>

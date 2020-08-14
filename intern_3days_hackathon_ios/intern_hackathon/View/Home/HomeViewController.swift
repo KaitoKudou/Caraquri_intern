@@ -13,6 +13,8 @@ protocol HomeViewProtocol {
     func reloadData()
     func presentAlert(error: ErrorType)
     func reloadRows(indexPath: IndexPath)
+    func indicatorStart()
+    func indicatorStop()
 }
 
 final class HomeViewController: UIViewController {
@@ -20,10 +22,12 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var eventsList: UITableView!
     @IBOutlet private weak var eventSearchBar: UISearchBar!
     var presenter: HomeViewPresenter!
-        var searchingText = ""
+    var searchingText = ""
+    var indicator = UIActivityIndicatorView()
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            indicator.indicatorCustom(view: view)
             eventSearchBar.customToolbar(view: view)
             presenter = HomeViewPresenter(view: self)
             eventsList.register(R.nib.homeCell)
@@ -65,6 +69,7 @@ final class HomeViewController: UIViewController {
             cell.set(event: presenter.events[indexPath.row])
             cell.delegate = self
             cell.index = indexPath
+            cell.layer.cornerRadius = 5
             return cell
         }
         
@@ -101,7 +106,15 @@ final class HomeViewController: UIViewController {
         }
     }
     //MARK: - HomeViewProtocol
-    extension HomeViewController: HomeViewProtocol {
+extension HomeViewController: HomeViewProtocol {
+    func indicatorStart() {
+        indicator.startAnimating()
+    }
+    
+    func indicatorStop() {
+        indicator.stopAnimating()
+    }
+    
         func reloadRows(indexPath: IndexPath) {
             eventsList.reloadRows(at: [indexPath], with: .none)
         }
