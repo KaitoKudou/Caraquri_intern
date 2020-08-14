@@ -21,6 +21,10 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         placeTextField.delegate = self
         memoTextField.delegate = self
         //setupToolbar()
+        
+        dateTextField.customToolbar(view: view)
+        placeTextField.customToolbar(view: view)
+        memoTextField.customToolbar(view: view)
     }
     
     @IBAction func closeModal(_ sender: Any) {
@@ -40,6 +44,7 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker: UIDatePicker = UIDatePicker()
         datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.locale = Locale(identifier: "ja")
         dateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
     }
