@@ -52,6 +52,7 @@
                     <constraint firstItem="Iou-mc-bKo" firstAttribute="top" secondItem="eot-tP-cse" secondAttribute="bottom" constant="4.5" id="zIj-hZ-SN0"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="EhF-Wa-SvG" id="Ymt-FL-SNv"/>
