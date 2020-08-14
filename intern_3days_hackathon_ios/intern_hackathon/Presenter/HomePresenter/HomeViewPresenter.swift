@@ -14,6 +14,7 @@ class HomeViewPresenter {
     var searchStart = 1
     private let view: HomeViewProtocol!
     let model: HomeViewModel!
+    var event: [Event] = []
     
     init(view: HomeViewProtocol) {
         self.view = view
@@ -21,6 +22,7 @@ class HomeViewPresenter {
     }
     
     func searchEvents(viewDidLoad: Bool, keyword: String) {
+        view.indicatorStart()
         APIClient.fetchEvents(keyword: keyword, viewDidLoad: viewDidLoad, startCount: searchStart) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -35,6 +37,7 @@ class HomeViewPresenter {
                 case .failure(let error):
                     self.view.presentAlert(error: error)
                 }
+                self.view.indicatorStop()
             }
         }
     }

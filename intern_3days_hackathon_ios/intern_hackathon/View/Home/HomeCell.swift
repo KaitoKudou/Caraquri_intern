@@ -30,19 +30,18 @@ class HomeViewCell: UITableViewCell {
         
     }
     
+    override func layoutSubviews() {
+        // Set the width of the cell
+        super.layoutSubviews()
+        self.layer.cornerRadius = 5
+    }
+    
     @IBAction func tappedBookmark(_ sender: UIButton) {
         delegate?.reloadCell(indexPath: index)
-        //        db.collection("Users").document("aaa").collection("Bookmark").addDocument(data: ["startedAt": startedAt.text!, "address": address.text!, "title": title.text!]) { (err) in
-        //            guard let err = err else {
-        //                print("success")
-        //                return
-        //            }
-        //            print(err)
-        //        }
     }
     
     func set(event: HomeViewCellData) {
-        startedAt.text = event.event.startedAt
+        startedAt.text = event.changedStartedAt
         title.text = event.event.title
         address.text = event.event.address ?? ""
         
