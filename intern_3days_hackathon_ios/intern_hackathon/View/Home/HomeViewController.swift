@@ -6,12 +6,13 @@
 //  Copyright © 2020 caraquri. All rights reserved.
 //
 
-import UIKit
 import SafariServices
+import UIKit
 
 protocol HomeViewProtocol {
     func reloadData()
     func presentAlert(error: ErrorType)
+    func reloadRows(indexPath: IndexPath)
 }
 final class HomeViewController: UIViewController {
     
@@ -26,13 +27,23 @@ final class HomeViewController: UIViewController {
         presenter = HomeViewPresenter(view: self)
         eventsList.register(R.nib.homeViewCell)
         presenter.searchEvents(viewDidLoad: true, keyword: "")
+        if UserDefaults.standard.string(forKey: "User") == nil {
+        presenter.createUsers()
+        }
+    }
+}
+//MARK: - HomeViewCellDelegate
+extension HomeViewController: HomeViewCellDelegate {
+    func reloadCell(indexPath: IndexPath) {
+        presenter.setUserDefault(indexPath: indexPath)
+        presenter.events[indexPath.row].color = false
     }
 }
 //MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let urlString = presenter.events[safe: indexPath.row]?.eventURL,
+        guard let urlString = presenter.events[safe: indexPath.row]?.event.eventURL,
             let url = URL(string: urlString) else { return }
         
         let safariViewController = SFSafariViewController(url: url)
@@ -47,7 +58,12 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.homeViewCell, for: indexPath)!
+        if presenter.events[indexPath.row].event.title == UserDefaults.standard.string(forKey: presenter.events[indexPath.row].event.eventURL) {
+            presenter.events[indexPath.row].color = true
+        }
         cell.set(event: presenter.events[indexPath.row])
+        cell.delegate = self
+        cell.index = indexPath
         return cell
     }
     
@@ -85,12 +101,17 @@ extension HomeViewController: UISearchBarDelegate {
 }
 //MARK: - HomeViewProtocol
 extension HomeViewController: HomeViewProtocol {
+    func reloadRows(indexPath: IndexPath) {
+        eventsList.reloadRows(at: [indexPath], with: .none)
+    }
+    
     func presentAlert(error: ErrorType) {
         let alert = UIAlertController.createErrorAlert(error)
         self.present(alert, animated: true)
     }
-
+    
     func reloadData() {
         eventsList.reloadData()
     }
+    
 }
