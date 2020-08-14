@@ -14,6 +14,7 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var placeTextField: UITextField!
     @IBOutlet weak var memoTextField: UITextField!
     let eventInputViewPresenter = EventInputViewPresenter()
+    @IBOutlet weak var finishButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,11 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
         dateTextField.customToolbar(view: view)
         placeTextField.customToolbar(view: view)
         memoTextField.customToolbar(view: view)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        textFieldValidate()
     }
     
     @IBAction func closeModal(_ sender: Any) {
@@ -64,5 +70,37 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     @objc func doneBtn() {
         dateTextField.resignFirstResponder()
     }
-
+    
+    func textFieldValidate() {
+        guard let dateTextData = dateTextField.text else {
+            self.finishButton.isEnabled = false
+            return
+        }
+        guard let placeTextData = placeTextField.text else {
+            self.finishButton.isEnabled = false
+            return
+        }
+        guard let memoTextData = memoTextField.text else {
+            self.finishButton.isEnabled = false
+            return
+        }
+        
+        if dateTextData.isEmpty {
+            self.finishButton.isEnabled = false
+        } else {
+            self.finishButton.isEnabled = true
+        }
+        
+        if placeTextData.isEmpty {
+            self.finishButton.isEnabled = false
+        } else {
+            self.finishButton.isEnabled = true
+        }
+        
+        if memoTextData.isEmpty {
+            self.finishButton.isEnabled = false
+        } else {
+            self.finishButton.isEnabled = true
+        }
+    }
 }
