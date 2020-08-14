@@ -36,9 +36,12 @@
 		44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */; };
 		44431E6524E3FEA4006A32C3 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6424E3FEA4006A32C3 /* FSCalendar.framework */; };
 		44431E6924E3FEC7006A32C3 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */; };
+		5501ABBD24E6634E000E697B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5501ABBC24E6634E000E697B /* HomeCell.xib */; };
+		5501ABBF24E6636B000E697B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABBE24E6636A000E697B /* HomeCell.swift */; };
+		5501ABC124E663A6000E697B /* HomeViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC024E663A6000E697B /* HomeViewCellData.swift */; };
+		5501ABC524E663F7000E697B /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC424E663F7000E697B /* HomeViewPresenter.swift */; };
+		5501ABC724E6644A000E697B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501ABC624E6644A000E697B /* HomeViewModel.swift */; };
 		556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */; };
-		556DD8FE24E3D31500D0F0B8 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */; };
-		556DD8FF24E3D31500D0F0B8 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */; };
 		5578350924E4D63D00B2F9D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */; };
 		5578353B24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5578353A24E4DF8B00B2F9D5 /* gRPCCertificates-Cpp.bundle */; };
 		5578354124E4E7D900B2F9D5 /* BoringSSL-GRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351424E4DCC300B2F9D5 /* BoringSSL-GRPC.framework */; };
@@ -59,7 +62,6 @@
 		5578355F24E4E7DA00B2F9D5 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578351024E4DCC200B2F9D5 /* nanopb.framework */; };
 		5578356124E4E7DA00B2F9D5 /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */; };
 		5578356524E4E7DA00B2F9D5 /* abseil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5578356424E4E7DA00B2F9D5 /* abseil.framework */; };
-		5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */; };
 		5578356B24E4F83000B2F9D5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71424C34D2300383122 /* Nuke.framework */; };
 		5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */; };
 		55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */; };
@@ -99,10 +101,13 @@
 		44431E6224E3FCAC006A32C3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		44431E6424E3FEA4006A32C3 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
 		44431E6824E3FEC7006A32C3 /* CalculateCalendarLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalculateCalendarLogic.framework; path = Carthage/Build/iOS/CalculateCalendarLogic.framework; sourceTree = "<group>"; };
+		5501ABBC24E6634E000E697B /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		5501ABBE24E6636A000E697B /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		5501ABC024E663A6000E697B /* HomeViewCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCellData.swift; sourceTree = "<group>"; };
+		5501ABC424E663F7000E697B /* HomeViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		5501ABC624E6644A000E697B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
-		556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		5578350824E4D63D00B2F9D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5578350A24E4DCC200B2F9D5 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseFirestore.framework; path = Carthage/Build/iOS/FirebaseFirestore.framework; sourceTree = "<group>"; };
 		5578350B24E4DCC200B2F9D5 /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-Core.framework"; path = "Carthage/Build/iOS/gRPC-Core.framework"; sourceTree = "<group>"; };
@@ -124,7 +129,6 @@
 		5578353C24E4E4CC00B2F9D5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Carthage/Build/iOS/PromisesObjC.framework/Headers; sourceTree = "<group>"; };
 		5578353D24E4E50500B2F9D5 /* PromisesObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromisesObjC.framework; path = Carthage/Build/iOS/PromisesObjC.framework; sourceTree = "<group>"; };
 		5578356424E4E7DA00B2F9D5 /* abseil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = abseil.framework; path = Carthage/Build/iOS/abseil.framework; sourceTree = "<group>"; };
-		5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 		5578356C24E517CE00B2F9D5 /* Keyboad+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboad+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +312,7 @@
 			children = (
 				08C5FE2524CD7A8B007100CA /* Event.swift */,
 				4440151424E53EDF0088B6FA /* EventPlan.swift */,
+				5501ABC024E663A6000E697B /* HomeViewCellData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -339,8 +344,8 @@
 			children = (
 				556DD8F824E3C8A300D0F0B8 /* HomeViewController.swift */,
 				556DD8FA24E3C8AE00D0F0B8 /* Home.storyboard */,
-				556DD8FC24E3D31500D0F0B8 /* HomeViewCell.swift */,
-				556DD8FD24E3D31500D0F0B8 /* HomeViewCell.xib */,
+				5501ABBE24E6636A000E697B /* HomeCell.swift */,
+				5501ABBC24E6634E000E697B /* HomeCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 		5578350724E4D46800B2F9D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5501ABC624E6644A000E697B /* HomeViewModel.swift */,
 				08C5FE2324CD79D4007100CA /* API */,
 			);
 			path = Model;
@@ -374,7 +380,7 @@
 		5578356824E4F15400B2F9D5 /* HomePresenter */ = {
 			isa = PBXGroup;
 			children = (
-				5578356924E4F18000B2F9D5 /* HomeViewPresenter.swift */,
+				5501ABC424E663F7000E697B /* HomeViewPresenter.swift */,
 			);
 			path = HomePresenter;
 			sourceTree = "<group>";
@@ -446,12 +452,12 @@
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
+				5501ABBD24E6634E000E697B /* HomeCell.xib in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
 				44431E6124E3FC9B006A32C3 /* Calendar.storyboard in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
 				556DD8FB24E3C8AE00D0F0B8 /* Home.storyboard in Resources */,
 				4440152324E629DD0088B6FA /* CalendarViewCell.xib in Resources */,
-				556DD8FF24E3D31500D0F0B8 /* HomeViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,13 +533,14 @@
 			files = (
 				4440152424E629DD0088B6FA /* CalendarViewCell.swift in Sources */,
 				44431E6324E3FCAC006A32C3 /* CalendarViewController.swift in Sources */,
-				556DD8FE24E3D31500D0F0B8 /* HomeViewCell.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
+				5501ABBF24E6636B000E697B /* HomeCell.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
 				55DFEA0E24E434D2008F96DA /* HomeViewController.swift in Sources */,
 				088E557524D660B700A2FE3E /* SampleEventListCell.swift in Sources */,
 				4440151E24E5421D0088B6FA /* CalendarViewPresenter.swift in Sources */,
+				5501ABC124E663A6000E697B /* HomeViewCellData.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
 				5578356D24E517CF00B2F9D5 /* Keyboad+Extensions.swift in Sources */,
 				4440151524E53EDF0088B6FA /* EventPlan.swift in Sources */,
@@ -543,8 +550,9 @@
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
+				5501ABC724E6644A000E697B /* HomeViewModel.swift in Sources */,
+				5501ABC524E663F7000E697B /* HomeViewPresenter.swift in Sources */,
 				4440152024E5425C0088B6FA /* EventInputViewPresenter.swift in Sources */,
-				5578356A24E4F18000B2F9D5 /* HomeViewPresenter.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
 				4440151B24E541670088B6FA /* EventInputViewController.swift in Sources */,
 			);
