@@ -13,16 +13,14 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var placeTextField: UITextField!
     @IBOutlet weak var memoTextField: UITextField!
+    let eventInputViewPresenter = EventInputViewPresenter()
     
-    var eventInputViewPresenter = EventInputViewPresenter()
-    var date: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         dateTextField.delegate = self
         placeTextField.delegate = self
         memoTextField.delegate = self
         //setupToolbar()
-        eventInputViewPresenter.fetchEvent()
     }
     
     @IBAction func closeModal(_ sender: Any) {
@@ -54,7 +52,7 @@ class EventInputViewController: UIViewController, UITextFieldDelegate {
     
     @objc func datePickerValueChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat  = "YYYY/MM/dd"
+        dateFormatter.dateFormat  = "YYYY/M/d"
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
     

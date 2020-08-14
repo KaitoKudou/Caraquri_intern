@@ -16,6 +16,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     @IBOutlet weak var eventTableView: UITableView!
     
     let calendarViewPresenter = CalendarViewPresenter()
+    var eventPlan: [EventPlan] = []
+    var strDateArray = [String]() // 1ヶ月の日付を格納
+    var daysPlanArray = [String]()
+    var tmpDate: Calendar!
+    var year: Int!
+    var month: Int!
+    var day: Int!
     
     //祝日判定用のカレンダークラスのインスタンス
     private let tmpCalendar = Calendar(identifier: .gregorian)
@@ -34,8 +41,21 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         calendar.delegate = self
         calendar.dataSource = self
+        
+        eventTableView.delegate = self
+        eventTableView.dataSource = self
+        eventTableView.register(R.nib.calendarViewCell)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        calendarViewPresenter.fetchEvent(completion: { (eventPlanList) in
+            self.eventPlan = eventPlanList
+            print(self.eventPlan) // ここでは，表示される．
+        })
+        //print(self.eventPlan) // でも，ここでは表示されない．なんで？？？
+        
+        eventTableView.reloadData()
+    }
     // 土日・祝日の文字色を変える
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         
@@ -56,26 +76,34 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     // カレンダーの日付が選択されたら実行
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        let tmpDate = Calendar(identifier: .gregorian)
-        let month = tmpDate.component(.month, from: date)
-        let day = tmpDate.component(.day, from: date)
-        print("\(month)月\(day)日をタップした")
+        tmpDate = Calendar(identifier: .gregorian)
+        year = tmpDate.component(.year, from: date)
+        month = tmpDate.component(.month, from: date)
+        day = tmpDate.component(.day, from: date)
         
+        eventTableView.reloadData()
         let eventInputViewController: UIViewController = R.storyboard.eventInput.instantiateInitialViewController()!
         present(eventInputViewController, animated: true, completion: nil)
     }
     
     // 予定がある日にカレンダーに点を描画
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 1
+        
+        let strDate = calendarViewPresenter.dateFormatStr(fmt: "yyyy/M/d").string(from: date)
+        strDateArray.append(strDate)
+        //print("strdateArray：\(strDateArray)")
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        print(self.eventPlan.count)
+        return self.eventPlan.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = eventTableView.dequeueReusableCell(withIdentifier: "inputEventCell", for: indexPath)
-        return cell
+        let cell = eventTableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.calendarViewCell, for: indexPath)
+        cell?.set(eventPlan: eventPlan[indexPath.row])
+        return cell!
     }
 }
