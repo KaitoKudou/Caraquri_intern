@@ -17,6 +17,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     let calendarViewPresenter = CalendarViewPresenter()
     var eventPlan: [EventPlan] = []
+    var strDateArray = [String]() // 1ヶ月の日付を格納
+    var daysPlanArray = [String]()
     var tmpDate: Calendar!
     var year: Int!
     var month: Int!
@@ -42,7 +44,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         eventTableView.delegate = self
         eventTableView.dataSource = self
-        
+        eventTableView.register(R.nib.calendarViewCell)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -50,7 +52,9 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             self.eventPlan = eventPlanList
             print(self.eventPlan) // ここでは，表示される．
         })
-        print(self.eventPlan) // でも，ここでは表示されない．なんで？？？
+        //print(self.eventPlan) // でも，ここでは表示されない．なんで？？？
+        
+        eventTableView.reloadData()
     }
     // 土日・祝日の文字色を変える
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
@@ -79,31 +83,17 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         eventTableView.reloadData()
         let eventInputViewController: UIViewController = R.storyboard.eventInput.instantiateInitialViewController()!
-        
-        var daysArray = [String]()
-        for index in 0..<eventPlan.count {
-            print(eventPlan[index].date)
-            daysArray.append(eventPlan[index].date)
-            /*if eventPlan[index].date.contains("\(year!)/\(month!)/\(day!)") {
-                print("一致した")
-                break
-            } else {
-                print("一致してないから編集画面に遷移する")
-            }*/
-        }
-        print(daysArray)
-        
-        if daysArray.contains("\(year!)/\(month!)/\(day!)") {
-            print("一致した")
-        } else {
-            print("一致してないから編集画面に遷移する")
-            present(eventInputViewController, animated: true, completion: nil)
-        }
+        present(eventInputViewController, animated: true, completion: nil)
     }
     
     // 予定がある日にカレンダーに点を描画
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 1
+        
+        let strDate = calendarViewPresenter.dateFormatStr(fmt: "yyyy/M/d").string(from: date)
+        strDateArray.append(strDate)
+        //print("strdateArray：\(strDateArray)")
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,8 +102,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = eventTableView.dequeueReusableCell(withIdentifier: "inputEventCell", for: indexPath)
-        cell.textLabel?.text = eventPlan[indexPath.row].date
-        return cell
+        let cell = eventTableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.calendarViewCell, for: indexPath)
+        cell?.set(eventPlan: eventPlan[indexPath.row])
+        return cell!
     }
 }

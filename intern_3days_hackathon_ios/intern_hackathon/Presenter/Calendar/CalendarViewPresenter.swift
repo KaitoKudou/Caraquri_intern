@@ -50,4 +50,11 @@ class CalendarViewPresenter {
             }
         }
     }
+    
+    func dateFormatStr(fmt: String) -> DateFormatter {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.dateFormat = fmt
+        return dateFormatter
+    }
 }
